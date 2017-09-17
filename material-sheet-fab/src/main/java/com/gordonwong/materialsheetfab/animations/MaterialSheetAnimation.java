@@ -15,8 +15,6 @@ import android.view.animation.Interpolator;
 import com.gordonwong.materialsheetfab.MaterialSheetFab.RevealXDirection;
 import com.gordonwong.materialsheetfab.MaterialSheetFab.RevealYDirection;
 
-import io.codetail.animation.SupportAnimator;
-
 /**
  * Created by Gordon Wong on 7/5/2015.
  *
@@ -210,24 +208,32 @@ public class MaterialSheetAnimation {
 		} else {
 			// Circular reveal library uses absolute coordinates
 			// Setup animation
-			SupportAnimator anim = io.codetail.animation.ViewAnimationUtils
+			Animator anim = io.codetail.animation.ViewAnimationUtils
 					.createCircularReveal(view, centerX, centerY, startRadius, endRadius);
 			anim.setDuration((int) duration);
 			anim.setInterpolator(interpolator);
 			// Add listener
-			anim.addListener(new SupportAnimator.SimpleAnimatorListener() {
+			anim.addListener(new Animator.AnimatorListener() {
 				@Override
-				public void onAnimationStart() {
+				public void onAnimationStart(Animator animation) {
 					if (listener != null) {
 						listener.onStart();
 					}
 				}
 
 				@Override
-				public void onAnimationEnd() {
+				public void onAnimationEnd(Animator animation) {
 					if (listener != null) {
 						listener.onEnd();
 					}
+				}
+
+				@Override
+				public void onAnimationCancel(Animator animation) {
+				}
+
+				@Override
+				public void onAnimationRepeat(Animator animation) {
 				}
 			});
 			// Start animation
