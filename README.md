@@ -1,4 +1,5 @@
 # MaterialSheetFab
+[![](https://jitpack.io/v/devjn/material-sheet-fab.svg)](https://jitpack.io/#devjn/material-sheet-fab)
 [![Maven Central](https://img.shields.io/maven-central/v/com.gordonwong/material-sheet-fab.svg)](https://oss.sonatype.org/content/repositories/releases/com/gordonwong/material-sheet-fab/)
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/7bc537c29cfc4b74917fb0b2448d7127)](https://www.codacy.com/app/gowong/material-sheet-fab)
 [![GitHub license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://raw.githubusercontent.com/gowong/material-sheet-fab/master/LICENSE)
